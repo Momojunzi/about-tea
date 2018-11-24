@@ -1,0 +1,25 @@
+{
+  "name": "about-tea",
+  "version": "1.0.0",
+  "description": "tea info site and web tea shop",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd tea-client && yarn start",
+    "start": "nodemon server/server.js",
+    "heroku-postbuild": "cd tea-client && yarn && yarn run build",
+    "dev": "concurrently --kill-others-on-fail \"yarn start\" \"yarn client\""
+  },
+  "author": "Mark Holthaus",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.8",
+    "nodemailer-mailgun-transport": "^1.4.0",
+    "nodemon": "^1.18.4"
+  }
+}
